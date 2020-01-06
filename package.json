@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/zemskovs/tanks/issues"
   },
-  "homepage": "https://github.com/zemskovs/tanks#readme"
+  "homepage": "https://github.com/zemskovs/tanks#readme",
+  "devDependencies": {
+    "typescript": "^3.7.4"
+  }
 }
