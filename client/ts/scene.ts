@@ -1,7 +1,7 @@
 import { clear } from "./helpers";
 import { iYCnt, iXCnt, iCellSize } from "./constants";
 import { imgBrick, imgSteel, imgForest, imgWater } from "./images";
-import { oTank } from "./tank";
+import { oTank, tTank } from "./tank";
 import { map } from "./map";
 
 export function drawScene(
@@ -94,4 +94,15 @@ export function drawScene(
 		oTank.w,
 		oTank.h
 	);
+	context.drawImage(
+		tTank.image,
+		tTank.i * tTank.w,
+		0,
+		tTank.w,
+		tTank.h,
+		tTank.x,
+		tTank.y,
+		tTank.w,
+		tTank.h
+	);	//toDO: to obj
 }

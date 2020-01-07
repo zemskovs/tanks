@@ -1,6 +1,6 @@
 import { iCellSize } from "./constants";
 
-import { imgTank } from "./images";
+import { oImgTank, tImgTank } from "./images";
 
 class Tank {
 	x;
@@ -20,4 +20,5 @@ class Tank {
 	}
 }
 
-export const oTank = new Tank(iCellSize * 9, iCellSize * 24, 48, 48, imgTank);
+export const oTank = new Tank(iCellSize * 9, iCellSize * 24, 48, 48, oImgTank);
+export const tTank = new Tank(iCellSize * 15, iCellSize * 24, 48, 48, tImgTank);//toDO: refactor
