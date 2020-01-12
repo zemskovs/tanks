@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "build": "npx parcel build client/index.html --out-dir server/dist",
+    "server": "nodemon server/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,5 +20,11 @@
   "homepage": "https://github.com/zemskovs/tanks#readme",
   "devDependencies": {
     "typescript": "^3.7.4"
+  },
+  "dependencies": {
+    "express": "^4.17.1",
+    "parcel-bundler": "^1.12.4",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.0"
   }
 }

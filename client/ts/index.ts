@@ -1,6 +1,7 @@
 import { iXCnt, iCellSize, iYCnt } from "./constants";
 import { drawScene } from "./scene";
 import { oTankController, tTankController } from "./controller";
+import { transport } from "./transport";
 
 const canvas = <HTMLCanvasElement>document.getElementById("canvas");
 
@@ -41,4 +42,6 @@ window.onkeydown = event => {
 	}
 };
 
-setInterval(scene, 60);
+transport
+
+setInterval(scene, 1000 / 24);
