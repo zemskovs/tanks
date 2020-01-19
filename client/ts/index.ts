@@ -2,6 +2,7 @@ import { iXCnt, iCellSize, iYCnt } from "./constants";
 import { drawScene } from "./scene";
 import { oTankController, tTankController } from "./controller";
 import { transport } from "./transport";
+import { apiClient } from "./api";
 
 const canvas = <HTMLCanvasElement>document.getElementById("canvas");
 
@@ -16,6 +17,7 @@ window.onkeydown = event => {
 	switch (event.keyCode) {
 		case 38: {
 			oTankController.up();
+			transport.emit("move", oTankController)
 			break;
 		}
 		case 40:
@@ -42,6 +44,6 @@ window.onkeydown = event => {
 	}
 };
 
-transport
+apiClient.getMap()
 
 setInterval(scene, 1000 / 24);

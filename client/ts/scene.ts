@@ -2,12 +2,14 @@ import { clear } from "./helpers";
 import { iYCnt, iXCnt, iCellSize } from "./constants";
 import { imgBrick, imgSteel, imgForest, imgWater } from "./images";
 import { oTank, tTank } from "./tank";
-import { map } from "./map";
+import { apiClient } from "./api";
+import { map } from "./map"
 
 export function drawScene(
 	context: CanvasRenderingContext2D,
 	canvas: HTMLCanvasElement
 ) {
+
 	clear(context, canvas);
 
 	// fill background

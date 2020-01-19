@@ -1,30 +1,37 @@
 {
-  "name": "tanks",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "npx parcel build client/index.html --out-dir server/dist",
-    "server": "nodemon server/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/zemskovs/tanks.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/zemskovs/tanks/issues"
-  },
-  "homepage": "https://github.com/zemskovs/tanks#readme",
-  "devDependencies": {
-    "typescript": "^3.7.4"
-  },
-  "dependencies": {
-    "express": "^4.17.1",
-    "parcel-bundler": "^1.12.4",
-    "socket.io": "^2.3.0",
-    "socket.io-client": "^2.3.0"
-  }
+	"name": "tanks",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"tsc": "tsc",
+		"build": "npx parcel build client/index.html --out-dir server/dist",
+		"dev": "ts-node-dev ./server/index.ts",
+		"prod": "tsc ./server/index.ts && node ./build/app.js",
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/zemskovs/tanks.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/zemskovs/tanks/issues"
+	},
+	"homepage": "https://github.com/zemskovs/tanks#readme",
+	"devDependencies": {
+		"@types/express": "^4.17.2",
+		"@types/node": "^13.1.8",
+		"@types/socket.io": "^2.1.4",
+		"typescript": "^3.7.4"
+	},
+	"dependencies": {
+		"@types/socket.io-client": "^1.4.32",
+		"express": "^4.17.1",
+		"parcel-bundler": "^1.12.4",
+		"socket.io": "^2.3.0",
+		"socket.io-client": "^2.3.0",
+		"ts-node-dev": "^1.0.0-pre.44"
+	}
 }
