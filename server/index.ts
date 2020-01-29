@@ -20,13 +20,12 @@ app.get(api.map, (req, res) => {
 
 io.on("connect", function(socket) {
 	console.log("connect");
+	io.on("move", (socket) => {
+		io.emit("up")
+		console.log(socket)
+
+	})
 });
-
-io.on("move", (socket) => {
-	io.emit("up")
-	console.log(socket)
-
-})
 
 http.listen(3000, function() {
 	console.log("listening on *:3000");
