@@ -43,7 +43,9 @@ io.on("connection", function(socket) {
 			}
 		}
 	})
+});
 
+let id = 1;
 app.get("/getId", (req, res) => {
   id += 1;
   if (id < 3) {
