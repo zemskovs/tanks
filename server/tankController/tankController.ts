@@ -22,7 +22,6 @@ class TankController {
 				}
 			}
 		}
-		console.log(player);
 		return player;
 	}
 

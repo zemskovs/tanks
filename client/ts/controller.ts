@@ -8,15 +8,16 @@ export class Controller {
   player;
 
   constructor(player) {
-    this.player = player;
+	this.player = player;
+	console.log(player.p)
   }
 
 	up() {
 		transport.emit(
-			`move1`,
+			`move${this.player.p}`,
 			JSON.stringify({ action: "up", player: this.player })
 		);
-		transport.on(`up1`, msg => {
+		transport.on(`up${this.player.p}`, msg => {
 			const p = JSON.parse(msg);
 			this.player.y = p.y
 		});
@@ -24,10 +25,10 @@ export class Controller {
 
 	down() {
 		transport.emit(
-			`move1`,
+			`move${this.player.p}`,
 			JSON.stringify({ action: "down", player: this.player })
 		);
-		transport.on(`down1`, msg => {
+		transport.on(`down${this.player.p}`, msg => {
 			const p = JSON.parse(msg);
 			this.player.y = p.y
 		});
@@ -35,10 +36,10 @@ export class Controller {
 
 	right() {
 		transport.emit(
-			`move1`,
+			`move${this.player.p}`,
 			JSON.stringify({ action: "right", player: this.player })
 		);
-		transport.on(`right1`, msg => {
+		transport.on(`right${this.player.p}`, msg => {
 			const p = JSON.parse(msg);
 			this.player.x = p.x
 		});
@@ -46,10 +47,10 @@ export class Controller {
 
 	left() {
 		transport.emit(
-			`move1`,
+			`move${this.player.p}`,
 			JSON.stringify({ action: "left", player: this.player })
 		);
-		transport.on(`left1`, msg => {
+		transport.on(`left${this.player.p}`, msg => {
 			const p = JSON.parse(msg);
 			this.player.x = p.x
 		});
