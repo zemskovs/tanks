@@ -3,7 +3,7 @@ import { iYCnt } from "./constants";
 import { oTank, tTank } from "./tank";
 import { transport } from "./transport";
 
-class Controller {
+export class Controller {
   map = map;
   player;
 
@@ -56,5 +56,3 @@ class Controller {
 	}
 }
 
-export const oTankController = new Controller(oTank);
-export const tTankController = new Controller(tTank);
