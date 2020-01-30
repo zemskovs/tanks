@@ -1,0 +1,24 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.buttons {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.buttons .vertical-buttons {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-between;
+}
+
+.buttons .left,
+.buttons .up,
+.buttons .right,
+.buttons .down {
+	padding: 20px;
+}

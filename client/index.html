@@ -5,13 +5,35 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<meta http-equiv="X-UA-Compatible" content="ie=edge" />
 		<title>Tanks Game</title>
+		<link rel="stylesheet" href="./styles/map.css">
+		<!-- <link rel="stylesheet" href="./styles/solid.min.css"> -->
 	</head>
 	<body>
 		<div class="container">
 			<div class="canvasContainer">
-				<canvas id="canvas" width="600" height="600"></canvas>
+				<canvas id="canvas"></canvas>
+			</div>
+			<div class="buttons">
+				<div class="left">
+					Влево
+				</div>
+				<div class="vertical-buttons">
+					<div class="up">
+						Вверх
+					</div>
+					<div class="down">
+						Вниз
+					</div>
+				</div>
+				<div class="right">
+					Вправо
+				</div>
 			</div>
 		</div>
 		<script src="./ts/index.ts"></script>
+		<audio autoplay preload="auto">
+			<source src="./assets/sounds/tanks.mp3" type="audio/mpeg">
+			Тег audio не поддерживается вашим браузером.
+		</audio>
 	</body>
 </html>
