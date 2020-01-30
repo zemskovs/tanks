@@ -25,8 +25,20 @@ io.on("connection", function(socket) {
 		const msg = JSON.parse(message);
 		console.log(msg)
 		switch (msg.action) {
-			case "up": {				
+			case "up": {
 				io.emit("up1", JSON.stringify(tankController.up(msg.player)))
+				break
+			}
+			case "down": {
+				io.emit("down1", JSON.stringify(tankController.down(msg.player)))
+				break
+			}
+			case "right": {
+				io.emit("right1", JSON.stringify(tankController.right(msg.player)))
+				break
+			}
+			case "left": {
+				io.emit("left1", JSON.stringify(tankController.left(msg.player)))
 				break
 			}
 		}
